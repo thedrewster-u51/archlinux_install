@@ -7,8 +7,9 @@ Basic install that uses the following components and configuration
 
 The official Archlinux Install guide: https://wiki.archlinux.org/index.php/Installation_Guide
 
-# Write ISO image to USB
-- Download the archiso image from https://www.archlinux.org/download/
+## Write ISO image to USB
+
+Download the archiso image from https://www.archlinux.org/download/
 
 **Linux**
 ```
@@ -17,27 +18,23 @@ dd bs=4M if=archlinux.iso of=/dev/sdx status=progress oflag=sync # on linux
 
 **Windows & OSX**
 
-- https://www.balena.io/etcher/
+https://www.balena.io/etcher/
 
-# Install
+## Pre-install Setup
 
-1. Set your keymap (Optional)
+Set your keymap (Optional)
 ```
 loadkeys en
 ```
 
-## Connect to Internet:
-
-### Connect to WLAN using wlan0:
-
-- `iwctl`
+Connect to WLAN using wlan0 & iwctl:
 ```
-$ station wlan0 connect SSID
+station wlan0 connect SSID
 # or
-$ iwctl --passphrase passphrase station wlan0 connect SSID
+iwctl --passphrase passphrase station wlan0 connect SSID
 ```
 
-- Check connection:
+Check connectivity
 ```
 # Checks internet without DNS
 ping 1.1.1.1
